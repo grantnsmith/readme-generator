@@ -1,5 +1,4 @@
 var inquirer = require("inquirer");
-var fs = require("fs");
 var generateMarkdown = require("./utilities/generateMarkdown.js");
 
 inquirer.prompt([
@@ -58,5 +57,9 @@ inquirer.prompt([
     },
 
 ]).then(function(data) {
+
     generateMarkdown(data);
+
+}).catch(function(err) {
+    console.log(err);
 });
