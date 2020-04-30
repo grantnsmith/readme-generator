@@ -35,7 +35,7 @@ ${data.usage}
 
 ## License
 
-This project is license under the ${data.license} license.
+This project is licensed under: ${data.license}.
 
 ## Contributing
 
@@ -60,6 +60,5 @@ fs.writeFile("README_TEST.md", markdown, function(err) {
   }
 })
 }
-
 
 module.exports = generateMarkdown;

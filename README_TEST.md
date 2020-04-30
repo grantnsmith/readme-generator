@@ -1,9 +1,9 @@
 
-# Meg's Project
+# Grant
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
 ## Description
-This is megs project
+grant
 
 ## Table of Contents
 
@@ -27,15 +27,15 @@ npm i
 
 ## Usage
 
-Please use it
+stuff
 
 ## License
 
-This project is license under the No License license.
+This project is license under the MIT license.
 
 ## Contributing
 
-let me know 
+things
 
 ## Tests
 
@@ -45,5 +45,5 @@ npm test
 
 ## Questions
 
-If you have any questions about the repo contact megrmacsmith at megrmacsmith@gmail.com
+If you have any questions about the repo contact grant at grant@google.com
 
