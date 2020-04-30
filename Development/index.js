@@ -88,6 +88,7 @@ inquirer.prompt([
         type: "input",
         name: "contributing",
         message: "What does the user need to know about contributing to the repo?",
+        default: "We hold to the values of the Contributor Covenant. Read the values by clicking on the Contributor Covenant badge at the top of this ReadMe.",
         validate: emptyResponseValidation
     },
 
