@@ -1,6 +1,8 @@
+var fs = require("fs");
+
 function generateMarkdown(data) {
   
-  return `
+const markdown = `
 # ${data.title}
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
@@ -50,6 +52,13 @@ ${data.tests}
 If you have any questions about the repo contact ${data.username} at ${data.email}
 
 `
+fs.writeFile("README_TEST.md", markdown, function(err) {
+  if (err) {
+      return console.log(err);
+  } else {
+      console.log("Success!")
+  }
+})
 }
 
 
