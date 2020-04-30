@@ -58,8 +58,5 @@ inquirer.prompt([
     },
 
 ]).then(function(data) {
-
-    const { title, description, username, email, projectUrl, license, installation, tests, usage, contributing } = data;
-
     generateMarkdown(data);
 });
