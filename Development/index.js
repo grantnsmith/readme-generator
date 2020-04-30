@@ -1,6 +1,6 @@
 var inquirer = require("inquirer");
 var fs = require("fs");
-var dotenv = require("dotenv/types").configure();
+var generateMarkdown = require("./utilities/generateMarkdown.js");
 
 inquirer.prompt([
     {
@@ -25,7 +25,7 @@ inquirer.prompt([
     },
     {
         type: "input",
-        name: "project-url",
+        name: "projectUrl",
         message: "What is the URL to your project?"
     },
     {
@@ -57,9 +57,9 @@ inquirer.prompt([
         message: "What does the user need to know about contributing to the repo?",
     },
 
+]).then(function(data) {
 
+    const { title, description, username, email, projectUrl, license, installation, tests, usage, contributing } = data;
 
-
-
-
-])
+    generateMarkdown(data);
+});
