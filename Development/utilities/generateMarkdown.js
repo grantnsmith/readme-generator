@@ -1,12 +1,16 @@
 var fs = require("fs");
 
-function generateMarkdown(data) {
+function generateMarkdown(data, name, profileURL, photo) {
   
 const markdown = `
 # ${data.title}
 
 ## Description
 ${data.description}
+
+## Deployed Application
+
+[Deployed Application](${data.projectUrl})
 
 ## Table of Contents
 
@@ -50,10 +54,12 @@ ${data.tests}
 
 ## Questions
 
-If you have any questions about the repo contact ${data.username} at ${data.email}
+![profile picture](${photo})
+
+Thanks for checking out my project! See more of my projects at my [Github Profile](${profileURL}). If you have any questions, please contact contact me, ${name} at ${data.email}
 
 `
-fs.writeFile("README.md", markdown, function(err) {
+fs.writeFile("README_2.md", markdown, function(err) {
   if (err) {
       return console.log(err);
   } else {
