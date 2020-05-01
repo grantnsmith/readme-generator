@@ -1,5 +1,6 @@
-var inquirer = require("inquirer");
-var generateMarkdown = require("./utilities/generateMarkdown.js");
+const inquirer = require("inquirer");
+const generateMarkdown = require("./utilities/generateMarkdown.js");
+const axios = require("axios")
 
 const emailValidation = value => {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
@@ -24,8 +25,6 @@ const emptyResponseValidation = value => {
     return "Input required";
     }
 };
-
-
 
 inquirer.prompt([
     {
@@ -55,7 +54,7 @@ inquirer.prompt([
     {
         type: "input",
         name: "projectUrl",
-        message: "What is the URL to your project?",
+        message: "What is the URL to your  deployed project?",
         validate: urlValidation
     },
     {
@@ -94,8 +93,20 @@ inquirer.prompt([
 
 ]).then(function(data) {
 
-    generateMarkdown(data);
+    const queryUrl = `https://api.github.com/users/${data.username}`;
+
+    axios.get(queryUrl).then(function(res) {
+
+        console.log(res)
+    
+    const name = res.data.name;
+    const profileURL = res.data.url;
+    const photo = res.data.avatar_url
+      
+    generateMarkdown(data, name, profileURL, photo);
 
 }).catch(function(err) {
     console.log(err);
+  })
+
 });
