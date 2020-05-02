@@ -2,7 +2,11 @@
 # Command Line ReadMe Generator
 
 ## Description
-This command line application dynamically generate’s a README.md based off of the user’s input.
+This command line application dynamically generate’s a README.md based off of the user’s input. 
+
+## Deployed Application
+
+[Deployed Application](https://github.com/grantnsmith/readme-generator)
 
 ## Table of Contents
 
@@ -26,7 +30,7 @@ npm i
 
 ## Usage
 
-Once you clone, make sure to install dependencies
+Clone repo and install dependencies
 
 ## License
 
@@ -46,5 +50,7 @@ npm test
 
 ## Questions
 
-If you have any questions about the repo contact grantnsmith at grantnsmith@gmail.com
+![profile picture](https://avatars0.githubusercontent.com/u/59103427?v=4)
+
+Thanks for checking out my project! See more of my projects at my [Github Profile](https://api.github.com/users/grantnsmith). If you have any questions, please contact contact me, Grant Smith at grantnsmith@gmail.com
 
