@@ -10,7 +10,7 @@ This command line application dynamically generate’s a README.md based off of 
 
 ## Application in Action
 
-![](../Development/readme-generator.gif)
+![](./Development/readme-generator.gif)
 
 ## Technologies Used
 * Javascript
