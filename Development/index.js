@@ -96,8 +96,6 @@ inquirer.prompt([
     const queryUrl = `https://api.github.com/users/${data.username}`;
 
     axios.get(queryUrl).then(function(res) {
-
-        console.log(res)
     
     const name = res.data.name;
     const profileURL = res.data.url;

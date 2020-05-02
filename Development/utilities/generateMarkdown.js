@@ -59,7 +59,7 @@ ${data.tests}
 Thanks for checking out my project! See more of my projects at my [Github Profile](${profileURL}). If you have any questions, please contact contact me, ${name} at ${data.email}
 
 `
-fs.writeFile("README_2.md", markdown, function(err) {
+fs.writeFile("README_generated.md", markdown, function(err) {
   if (err) {
       return console.log(err);
   } else {
